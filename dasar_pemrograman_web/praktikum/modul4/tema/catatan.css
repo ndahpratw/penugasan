@@ -1,0 +1,86 @@
+body {
+    background-color: gray; 
+    margin: 0;
+}
+
+header {
+    padding: 10px;
+    background-color: #3E424B;
+    text-align: right;
+}
+
+/*MENU*/
+ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none; 
+    color: white;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+ul li a:hover {
+    background-color: #999DA0;
+}
+ul li.aktif a{
+    background-color: #999DA0;
+    color: black;
+}
+
+/*JUDUL*/
+marquee {
+    color: white;
+    text-shadow: 5px 5px black;
+}
+h1 {
+    text-align: center;
+    background-color: #3E424B;
+    width: 100%;
+    margin-top: 0px;
+    padding-bottom: 15px;
+}
+
+/*LATAR BELAKANG (LOGO UTM)*/
+.latarbelakang {
+    background: url(../sumber\ daya/logoUTM.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*SUB JUDUL*/
+h2 {
+    padding-left: 10px;
+}
+
+.bulan {
+    text-align:center;
+    background-color:#696969"
+}
+
+/*PARAGRAF*/
+p {
+    text-align:justify;
+    text-indent: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bawah {
+    text-align: center;  
+    background-color: #3E424B;
+    width: 100%;
+    margin: 0px;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

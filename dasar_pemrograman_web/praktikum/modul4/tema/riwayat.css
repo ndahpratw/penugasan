@@ -1,0 +1,114 @@
+body {
+    background-color: gray; 
+    margin: 0;
+
+}
+header {
+    padding: 10px;
+    background-color: #3E424B;
+    text-align: right;
+}
+
+/*MENU*/
+.menu li {
+    display: inline-block;
+}
+.menu li a {
+    text-decoration: none; 
+    color: white;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.menu li a:hover {
+    background-color: #999DA0;
+}
+.menu li.aktif a{
+    background-color: #999DA0;
+    color: black;
+}
+
+/*JUDUL*/
+h1 {
+    font-family: 'Times New Roman';
+    text-align: center;
+    background-color: #3E424B;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+b {
+    font-size: 50px;
+}
+
+/*LATARBELAKANG (LOGO UTM)*/
+.latarbelakang {
+    background: url(../sumber\ daya/logoUTM.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+/*SUB JUDUL*/
+h2 {
+    font-family: Arial;
+    padding-left: 5px;
+    text-decoration: underline;
+}
+
+/*TABLE*/
+.table1 {
+    border-spacing: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+    border : 1px solid black;
+    width:1225px;
+    margin-top: 35px;
+}
+.table2 {
+    margin-left: auto;
+    margin-right: auto; 
+    width:1225px;
+}
+
+.nonFormal {
+    margin-top: 0;
+}
+
+.datadiri{
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color:blue;
+}
+
+.jarak {
+    text-indent: 25px;
+}
+
+.nonformal {
+    text-indent: 15px;
+}
+
+.minat {
+    background-color: aqua;
+}
+
+.bawah {
+    text-align: center;  
+    background-color: #3E424B;
+    width: 100%;
+    margin: 0px;
+    padding: 15px;
+}
+
+.home {
+    text-decoration: none;
+    color: black;
+}

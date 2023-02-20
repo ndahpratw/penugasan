@@ -1,0 +1,145 @@
+body {
+    margin: 0px;
+    background: gray;
+}
+
+/*LATAR BELAKANG (LOGO UTM)*/
+.latarbelakang {
+    background-image: url(../sumber\ daya/logoUTM.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: center;
+    background-attachment: fixed;
+}
+/*BACKGROUND HEADER*/
+.background {
+    background-image: url(../sumber\ daya/header.jpg);
+}
+header {
+    padding: 10px;
+    text-align: right;
+}
+
+/*MENU*/
+ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none; 
+    color: black;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+    background-color: #999DA0;
+}
+ul li a:hover {
+    background-color: #3E424B;
+    border: 2px solid #3E424B;
+}
+ul li.aktif a{
+    background-color: #3E424B;
+    color: white;
+}
+
+/*JUDUL*/
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+    padding-bottom: 15px;
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    color: white;
+    text-shadow: 5px 5px black;
+}
+
+/*PARAGRAF 1*/
+.saya {
+    width: 175px;
+    margin: 15px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+img:hover {
+    transform: scale(1.15);
+}
+.halo {
+    font-family: Arial;
+    color: maroon;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.p1 {
+    margin: 10px;
+    text-align: justify;
+    text-indent: 45px;
+    font-family: Arial;
+    color: maroon;
+}
+.tentang {
+    color: rgb(75, 13, 13);
+    font-weight: bold;
+}
+
+/*PARAGRAF 2*/
+.desa {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+.p2 {
+    margin: 10px;
+    text-align: justify;
+    text-indent: 45px;
+    font-family: Tahoma;
+    color: green;
+}
+
+/*PARAGRAF 3*/
+.rumah {
+    width: 250px;
+    position: relative;
+    left : 78%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+.p3 {
+    margin: 10px;
+    text-align: justify;
+    text-indent: 45px;
+    font-family: 'Times New Roman';
+    font-size: large;
+    color: blue;
+}
+
+/*PARAGRAF 4*/
+.rumah2 {
+    margin: 15px;
+    width: 250px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+.p4 {
+    margin: 10px;
+    text-align: justify;
+    text-indent: 45px;
+    font-family: 'Times New Roman';
+    font-size: large;
+    color: rgb(253, 110, 22);
+}

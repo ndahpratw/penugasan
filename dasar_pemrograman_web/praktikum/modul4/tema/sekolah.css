@@ -1,0 +1,42 @@
+body{
+    background: gray;
+    margin: 0;
+}
+
+/*JUDUL*/
+h2 {
+    text-align: center;
+    background-color: #3E424B;
+    width: 100%;
+    margin-top: 0px;
+    padding: 15px;
+}
+
+/*LATAR BELAKANG (LOGO UTM)*/
+.latarbelakang {
+    background: url(../sumber\ daya/logoUTM.png);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center;
+}
+
+table {
+    border-spacing: 5px;
+    margin-left: 20px;
+}
+
+img {
+    float: right;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color:blue;
+}
+
+p {
+    font-weight: bold;
+    margin-left: 10px;
+}

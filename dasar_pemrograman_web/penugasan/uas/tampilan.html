@@ -1,0 +1,220 @@
+<html>
+	<head>
+		<title>UAS DPW</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<p class="identitas">Indah Pratiwi<br>210411100050<br>IF - 2E</p>
+
+		<h1>Data Mahasiswa</h1>
+
+		<!--BAGIAN TABEL-->
+		<table border="1px solid" id="tabel" cellspacing="0px" cellpadding="5px">
+			<!--bagian judul tabel-->
+			<tr>
+				<th>NIP</th>
+				<th>Nama</th>
+				<th>Jenis Kelamin</th>
+				<th>Umur</th>
+				<th>Penghasilan</th>
+			</tr>
+			<!--bagian isi tabel-->
+			<tr>
+				<td>2017001</td>
+				<td>Zainul</td>
+				<td>L</td>
+				<td>28</td>
+				<td>2000000</td>
+			</tr>
+			<tr>
+				<td>2017002</td>
+				<td>Halimah</td>
+				<td>P</td>
+				<td>32</td>
+				<td>3500000</td>
+			</tr>
+			<tr>
+				<td>2017003</td>
+				<td>Bagus</td>
+				<td>L</td>
+				<td>22</td>
+				<td>1500000</td>
+			</tr>
+			<tr>
+				<td>2017004</td>
+				<td>Ana</td>
+				<td>P</td>
+				<td>30</td>
+				<td>2750000</td>
+			</tr>
+			<tr>
+				<td>2017005</td>
+				<td>Toni</td>
+				<td>L</td>
+				<td>35</td>
+				<td>3350000</td>
+			</tr>
+			<tr>
+				<td>2017006</td>
+				<td>Intan</td>
+				<td>P</td>
+				<td>22</td>
+				<td>1200000</td>
+			</tr>
+		</table>
+
+		<!--BAGIAN FILTER TABEL BERDASARKAN JENIS KELAMIN-->
+		<p>
+			<label id="filter">Filter Tabel Berdasarkan Jenis Kelamin</label>
+			<input type=text placeholder="L/P" id="inputGender" onkeyup="filterGender()">
+		</p>
+
+		<!--BAGIAN SORTING UMUR (NRP GENAP)-->
+		<button onclick="sortUmur();">Sorting Umur</button>
+
+		<!--BAGIAN TAMBAH DATA BARU	-->
+		<button onclick="dataBaru();">Tambah Data Baru</button>
+		<!--bagian inputan jika user akan menambah data baru-->
+		<span id="tambah" style="display:none;">
+			<label class="nip">NIP</label><input type="text" id="nip"><p id="nipError" class="kesalahan"></p><br>
+			<label class="nama">Nama</label><input type="text" id="nama"><p id="namaError" class="kesalahan"></p><br>
+			<label class="gender">Jenis Kelamin</label><input type="text" id="gender"><p id="genderError" class="kesalahan"></p><br>
+			<label class="umur">Umur</label><input type="text" id="umur"><p id="umurError" class="kesalahan"></p><br>
+			<label class="penghasilan">Penghasilan</label><input type="text" id="penghasilan"><p id="gajiError" class="kesalahan"></p><br>
+			<button onclick="tambahDataBaru();">Tambahkan</button>
+		</span>
+
+	<script>
+
+//fungsi ketika akan dilakukan penambahan data
+function dataBaru(){
+	var dataBaru = document.getElementById("tambah");
+	dataBaru.style.display="block";}
+
+//fungsi ketika data baru akan ditambahkan pada tabel
+function tambahDataBaru(){
+	//pemanggilan id + validasi data
+	//validasi NIP---------------------------------------------------------------------------
+	var nip = document.getElementById('nip').value;
+		if(nip==""){
+			document.getElementById("nipError").innerHTML='<em>kolom ini wajib diisi</em>';
+		}
+		else if(!nip.match(/^[0-9]+$/)){
+			document.getElementById("nipError").innerHTML='<em>NIP harus diisi dengan angka</em>';
+		}
+		else{
+			document.getElementById("nipError").innerHTML=' ';
+		}
+	//validasi nama---------------------------------------------------------------------------
+	var nama = document.getElementById('nama').value.trim();
+		if(nama==""){
+			document.getElementById("namaError").innerHTML='<em>kolom ini wajib diisi</em>';
+		}
+		else if(!nama.match(/^[a-zA-Z]*$/)){
+			document.getElementById("namaError").innerHTML='<em>nama tidak boleh diisi dengan angka</em>';
+		}
+		else{
+			document.getElementById("namaError").innerHTML=' ';
+		}
+	//validasi gender---------------------------------------------------------------------------
+	var gender = document.getElementById('gender').value.toUpperCase();
+		if(gender==""){
+			document.getElementById("genderError").innerHTML='<em>kolom ini wajib diisi</em>';
+		}
+		else if(gender!="L" && gender!="P"){
+			document.getElementById("genderError").innerHTML='<em>gender cukup diisi P apabila perempuan dan L apabila lakilaki</em>';
+		}
+		else{
+			document.getElementById("genderError").innerHTML=' ';
+		}
+	//validasi umur---------------------------------------------------------------------------
+	var umur = document.getElementById('umur').value;
+		if(umur==""){
+			document.getElementById("umurError").innerHTML='<em>kolom ini wajib diisi</em>';
+		}
+		else if(!umur.match(/^[0-9]+$/)){
+			document.getElementById("umurError").innerHTML='<em>umur harus diisi dengan angka<em>';
+		}
+		else{
+			document.getElementById("umurError").innerHTML=' ';
+		}
+	//validasi penghasilan---------------------------------------------------------------------------
+	var penghasilan = document.getElementById('penghasilan').value;
+		if(penghasilan==""){
+			document.getElementById("gajiError").innerHTML='<em>kolom ini wajib diisi</em>';
+		}
+		else if(!penghasilan.match(/^[0-9]+$/)){
+			document.getElementById("gajiError").innerHTML='<em>penghasilan harus diisi dengan angka<em>';
+		}
+		else{
+			document.getElementById("gajiError").innerHTML=' ';
+		}
+	//Jika semua inputan data benar maka data akan dimasukkan pada tabel
+	if ((nip!="") && (nip.match(/^[0-9]+$/)) && (nama!="") && (nama.match(/^[a-zA-Z]*$/)) && (umur!="") && (umur.match(/^[0-9]+$/)) && (gender!="") && (gender=="L" || gender=="P") && (penghasilan!="") && (penghasilan.match(/^[0-9]+$/))) {
+		//pembuatan variabel yang akan menampung data dan akan disisipkan pada tabel
+		var table = document.getElementsByTagName('table')[0];
+		var newRow = table.insertRow(table.rows.length);
+		//penambahan data sesuai dengan indeks cell yang telah ditentukan
+		var cell1 = newRow.insertCell(0);
+		cell1.innerHTML = nip;
+		var cell2 = newRow.insertCell(1);
+		cell2.innerHTML = nama;
+		var cell3 = newRow.insertCell(2);
+		cell3.innerHTML = gender;
+		var cell4 = newRow.insertCell(3);
+		cell4.innerHTML = umur;
+		var cell5 = newRow.insertCell(4);
+		cell5.innerHTML = penghasilan;
+		//tampilan inputan data disembunyikan
+		var dataBaru = document.getElementById("tambah");
+		dataBaru.style.display="none";
+		//untuk mengkosongkan kembali inputan yang ada
+		document.getElementById("nip").value="";
+		document.getElementById("nama").value="";
+		document.getElementById("gender").value="";
+		document.getElementById("umur").value="";
+		document.getElementById("penghasilan").value="";
+	}}
+
+//fungsi untuk memfilter tabel berdasarkan gender yang dipilih
+function filterGender() {
+	var i;
+	var inputGender = document.getElementById("inputGender");
+	var filter = inputGender.value.toUpperCase();
+	var tabel = document.getElementById("tabel");
+	var tr = tabel.getElementsByTagName("tr");
+	for (i = 0; i < tr.length; i++) {
+		var td = tr[i].getElementsByTagName("td")[2];
+		if (td) {
+			if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";}
+			else {
+				tr[i].style.display = "none";}
+		}}}
+
+//fungsi untuk meng-sorting (atau mengurutkan) tabel berdasarkan umur
+function sortUmur() {
+	var  i;
+	var tabel = document.getElementById("tabel");
+	var tukarPosisi = true;
+	while (tukarPosisi) {
+		tukarPosisi = false;
+		var rows = tabel.rows;
+		for (i = 1; i < (rows.length - 1); i++) {
+			var posisiDitukar = false;
+			var x = rows[i].getElementsByTagName("TD")[3];
+			var y = rows[i + 1].getElementsByTagName("TD")[3];
+			if (Number(x.innerHTML) > Number(y.innerHTML)) {
+				posisiDitukar = true;
+				break;
+		}}
+		if (posisiDitukar) {
+			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			tukarPosisi = true;
+		}}}
+
+	</script>
+	</body>
+
+</html>

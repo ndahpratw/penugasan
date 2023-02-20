@@ -1,0 +1,91 @@
+/*bagian body*/
+body{
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+/*bagian identitas saya*/
+.identitas{
+    margin-top: 15px;
+}
+
+/*bagian judul*/
+h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-left: -20px;
+    margin-right: -8px;
+    padding: 15px;
+}
+
+/*bagian paragraf*/
+p{
+    margin: 0px;
+}
+
+
+/*bagian tabel*/
+table{
+    width: 1150px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+th{
+    background-color: gray;
+}
+td{
+    text-align: center;
+}
+
+/*bagian button*/
+button:hover, tr:hover{
+    background-color: #dcdcdc;
+}
+button{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #808080;
+    margin-top: 15px;
+}
+
+/*bagian tambah data baru*/
+#nip{
+    margin-top: 15px;
+}
+.nip::after{
+    content: ":";
+    margin-left: 83px;
+    margin-right: 20px;
+}
+.nama::after{
+    content: ":";
+    margin-left: 71px;
+    margin-right: 20px;
+}
+.gender::after{
+    content: ":";
+    margin-left: 17px;
+    margin-right: 20px;
+}
+.umur::after{
+    content: ":";
+    margin-left: 71px;
+    margin-right: 20px;
+}
+.penghasilan::after{
+    content: ":";
+    margin-left: 30px;
+    margin-right: 20px;
+}
+#inputGender{
+    width: 30px;
+    text-align: center;
+}
+
+/*bagian error*/
+.kesalahan {
+    display: inline;
+    margin-left: 10px;
+}
